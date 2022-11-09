@@ -85,7 +85,7 @@ setup(
         "aiohttp==3.8.3",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
-        "aiofiles==0.8.0",
+        "aiofiles==22.1.0",
         "aiofile==3.8.1",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
