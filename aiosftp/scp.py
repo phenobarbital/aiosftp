@@ -7,14 +7,12 @@ import os
 import ssl
 import socket
 import asyncio
-from pathlib import Path
 from datetime import datetime
 import asyncssh
-from navconfig import BASE_DIR, config
 from navconfig.logging import logging
 from asyncdb import AsyncDB
-from settings.settings import (
-    asyncpg_url,
+from .conf import (
+    default_dsn,
     SSH_SERVER_HOST,
     SSH_SERVER_PORT,
     SERVICE_BASE_PATH,
@@ -81,7 +79,7 @@ class aioSSHServer(asyncssh.SSHServer):
 
     async def validate_password(self, username, password):
         try:
-            db = AsyncDB('pg', dsn=asyncpg_url)
+            db = AsyncDB('pg', dsn=default_dsn)
             async with await db.connection() as conn:
                 FTPUser.Meta.set_connection(conn)
                 user = await FTPUser.get(username=username)
@@ -150,7 +148,6 @@ class SCPServer(object):
         self.port = port
         self.path = path
         self.debug = debug
-        print(self.host, self.port)
         if self.debug is True:
             asyncssh.set_debug_level(1)
             asyncssh.set_log_level(logging.DEBUG)
@@ -160,8 +157,7 @@ class SCPServer(object):
             self.ssh_key = RSA_KEY
         self.ssh_config = SSHD_CONFIG
         self.ssh_host_keys = asyncssh.read_private_key_list(self.ssh_key)
-        known_hosts = SSH_KNOWN_HOSTS
-        self._known_hosts = config.get('KNOWN_HOSTS_PATH', fallback=known_hosts)
+        self._known_hosts = SSH_KNOWN_HOSTS
         if self.debug:
             dbg = logging.DEBUG
             asyncssh.set_log_level(dbg)
@@ -180,7 +176,7 @@ class SCPServer(object):
             self._loop = event_loop
         try:
             os.chdir(str(self.path))
-            print(f"SSH: Current working directory: {os.getcwd()}")
+            print(f"SSH: Working Directory: {os.getcwd()}")
         except Exception as err:
             print(err)
             raise
@@ -190,7 +186,6 @@ class SCPServer(object):
         Closing FTP server connections
         """
         try:
-            await self._server.wait_closed()
             self.log.info('::: aio-sFTP: Closing all sFTP connections.')
             self._server.close()
         except Exception as err:
@@ -221,4 +216,4 @@ class SCPServer(object):
             known_client_hosts=[self._known_hosts],
             config=str(self.ssh_config)
         )
-        print('sFTP Server: ', self._server)
+        # print('sFTP Server: ', self._server)

@@ -148,7 +148,7 @@ class FTPServer(object):
             self._loop = event_loop
         try:
             os.chdir(str(self.path))
-            print(f"FTP: Current working directory: {os.getcwd()}")
+            print(f"FTP: Working Directory: {os.getcwd()}")
             users = UserModel(self.path)
             self._server = aioftp.Server(
                 users=users,

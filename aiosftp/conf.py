@@ -6,6 +6,29 @@ from pathlib import Path
 from navconfig import config, BASE_DIR
 
 """
+Databases
+"""
+# DB Default
+# POSTGRESQL Default
+DBHOST = config.get('DBHOST', fallback='localhost')
+DBUSER = config.get('DBUSER')
+DBPWD = config.get('DBPWD')
+DBNAME = config.get('DBNAME', fallback='navigator')
+DBPORT = config.get('DBPORT', fallback=5432)
+if not DBUSER:
+    raise Exception('Missing PostgreSQL Default Settings.')
+
+# database for changes (admin)
+default_dsn = 'postgres://{user}:{password}@{host}:{port}/{db}'.format(
+    user=DBUSER,
+    password=DBPWD,
+    host=DBHOST,
+    port=DBPORT,
+    db=DBNAME
+)
+
+
+"""
 FTP Server
 """
 FTP_ENABLED = config.getboolean('ENABLE_FTP', fallback=False)

@@ -4,7 +4,7 @@ import argparse
 import uvloop
 from .ftp import FTPServer
 from .scp import SCPServer
-from settings.settings import (
+from .conf import (
     FTP_SERVER_HOST,
     FTP_SERVER_PORT,
     SSH_SERVER_HOST,
@@ -71,6 +71,7 @@ def main():
         raise
     except KeyboardInterrupt:
         loop.run_until_complete(ftp.close())
+        loop.run_until_complete(scp.close())
         print('Closing (s)FTP Connections ...')
     finally:
         loop.close()
