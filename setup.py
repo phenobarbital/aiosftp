@@ -90,7 +90,8 @@ setup(
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.12.0",
-        "asyncdb[default]"
+        "asyncdb[default]",
+        "navconfig"
     ],
     tests_require=[
             'pytest>=5.4.0',
