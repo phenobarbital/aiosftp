@@ -1,6 +1,7 @@
 # aioSFTP #
 
-[![pypi](https://img.shields.io/pypi/v/asyncdb?style=plastic)](https://pypi.org/project/asyncdb/)
+[![pypi](https://img.shields.io/pypi/v/aiosftp?style=plastic)](https://pypi.org/project/aiosftp/)
+[![status](https://img.shields.io/pypi/status/aiosftp?style=plastic)](https://pypi.org/project/aiosftp/)
 [![versions](https://img.shields.io/pypi/pyversions/blacksheep.svg?style=plastic)](https://github.com/phenobarbital/naiosftp)
 [![Apache licensed](https://img.shields.io/github/license/phenobarbital/aiosftp?style=plastic)](https://raw.githubusercontent.com/phenobarbital/aiosftp/master/LICENSE)
 
