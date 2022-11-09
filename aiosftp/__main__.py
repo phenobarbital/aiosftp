@@ -1,4 +1,4 @@
-"""Navigator FTP server entry point."""
+"""aio (s)FTP server entry point."""
 import asyncio
 import argparse
 import uvloop

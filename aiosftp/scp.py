@@ -127,7 +127,7 @@ class aioSFTPServer(asyncssh.SFTPServer):
 
 
 class SCPServer(object):
-    """Navigator sFTP server.
+    """aio sFTP server.
 
     Attributes:
         host: Hostname of the server.
@@ -198,7 +198,7 @@ class SCPServer(object):
 
     def handle_clients(self, process: asyncssh.SSHServerProcess) -> None:
         user = process.get_extra_info('username')
-        process.stdout.write(f'Hi {user}, Welcome to NAVIGATOR SSH server\n')
+        process.stdout.write(f'Hi {user}, Welcome to aioSFTP SSH server\n')
 
     async def start(self):
         """Starts server."""

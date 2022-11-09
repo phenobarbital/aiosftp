@@ -102,11 +102,11 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'navftp = navsftp.__main__:main'
+            'aioftp = aiosftp.__main__:main'
         ]
     },
     project_urls={  # Optional
-        'Source': 'https://github.com/phenobarbital/nav-sftp',
+        'Source': 'https://github.com/phenobarbital/aiosftp',
         'Funding': 'https://paypal.me/phenobarbital',
         'Say Thanks!': 'https://saythanks.io/to/phenobarbital',
     },

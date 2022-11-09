@@ -21,13 +21,13 @@ First, you need to install aioSFTP:
 
 .. code-block ::
 
-    pip install nav-sftp
+    pip install aiosftp
 
 Then, you can start the server running the command:
 
 .. code-block ::
 
-   navftp --host <hostname> --port <port>
+   aiosftp --host <hostname> --port <port>
 
 where
 

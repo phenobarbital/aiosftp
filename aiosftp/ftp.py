@@ -91,7 +91,7 @@ class UserModel(AbstractUserManager):
 
 
 class FTPServer(object):
-    """Navigator FTP server.
+    """aio FTP server.
 
     Attributes:
         host: Hostname of the server.
