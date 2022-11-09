@@ -77,11 +77,11 @@ setup(
     author_email='jesuslara@phenobarbital.info',
     packages=find_packages(),
     setup_requires=[
-        'wheel==0.37.1',
+        'wheel==0.38.4',
         'cython==0.29.32'
     ],
     install_requires=[
-        "wheel==0.37.1",
+        "wheel==0.38.4",
         "aiohttp==3.8.3",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
@@ -97,7 +97,7 @@ setup(
             'pytest>=5.4.0',
             'coverage',
             'pytest-asyncio==0.20.1',
-            'pytest-xdist==2.1.0',
+            'pytest-xdist==3.0.2',
             'pytest-assume==2.4.2'
     ],
     entry_points={
