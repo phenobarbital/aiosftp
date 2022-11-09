@@ -20,6 +20,7 @@ class FTPUser(Model):
     password: str = Column(required=False)
     name: str = Column(required=False)
     last_login: datetime = Column(required=False, default=at_now)
+    date_joined: datetime = Column(required=False)
     last_ip: str = Column(required=False)
     is_active: bool = Column(required=False, default=False)
 

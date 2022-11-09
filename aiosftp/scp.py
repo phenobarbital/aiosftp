@@ -87,7 +87,7 @@ class aioSSHServer(asyncssh.SSHServer):
                     try:
                         user.last_ip = self.ip
                         user.last_login = datetime.now()
-                        await user.save()
+                        await user.update()
                         self.connection.set_extra_info(user=user)
                     except Exception as err:
                         logging.error(err)
@@ -106,7 +106,7 @@ class aioSSHServer(asyncssh.SSHServer):
 
 
 class aioSFTPServer(asyncssh.SFTPServer):
-    def __init__(self, chan):
+    def __init__(self, chan: asyncssh.SSHServerChannel):
         root = SERVICE_BASE_PATH
         try:
             user = chan.get_extra_info('user')
