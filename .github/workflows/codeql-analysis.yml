@@ -42,8 +42,6 @@ jobs:
       with:
         python-version: '3.9'
     - name: Install dependencies
-      run: |
-        sudo -H apt-get install python3.8-dev build-essential libssl-dev -y
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
@@ -75,6 +73,4 @@ jobs:
       uses: github/codeql-action/analyze@v1
 
     - name: Python style check
-      run: |
-        sudo -H apt-get install python3.9-dev build-essential libssl-dev -y
       uses: bulv1ne/python-style-check@v0.3
