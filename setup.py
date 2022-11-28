@@ -27,25 +27,25 @@ with open(version, 'r', encoding='utf-8') as meta:
         if len(node.targets) == 1:
             name = node.targets[0]
             if isinstance(name, ast.Name) and \
-                    name.id in (
-                            '__version__',
-                            '__title__',
-                            '__description__',
-                            '__author__',
-                            '__license__', '__author_email__'):
-                        v = node.value
-                        if name.id == '__version__':
-                            __version__ = v.s
-                        if name.id == '__title__':
-                            __title__ = v.s
-                        if name.id == '__description__':
-                            __description__ = v.s
-                        if name.id == '__license__':
-                            __license__ = v.s
-                        if name.id == '__author__':
-                            __author__ = v.s
-                        if name.id == '__author_email__':
-                            __author_email__ = v.s
+                name.id in (
+                    '__version__',
+                    '__title__',
+                    '__description__',
+                    '__author__',
+                    '__license__', '__author_email__'):
+                v = node.value
+                if name.id == '__version__':
+                    __version__ = v.s
+                if name.id == '__title__':
+                    __title__ = v.s
+                if name.id == '__description__':
+                    __description__ = v.s
+                if name.id == '__license__':
+                    __license__ = v.s
+                if name.id == '__author__':
+                    __author__ = v.s
+                if name.id == '__author_email__':
+                    __author_email__ = v.s
 
 setup(
     name=__title__,
@@ -77,11 +77,9 @@ setup(
     author_email='jesuslara@phenobarbital.info',
     packages=find_packages(),
     setup_requires=[
-        'wheel==0.38.4',
-        'cython==0.29.32'
+        "asyncio==3.4.3",
     ],
     install_requires=[
-        "wheel==0.38.4",
         "aiohttp==3.8.3",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
@@ -90,8 +88,8 @@ setup(
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.12.0",
-        "asyncdb[default]",
-        "navconfig"
+        "asyncdb[default]>=2.1.30",
+        "navconfig>=1.0.6"
     ],
     tests_require=[
             'pytest>=5.4.0',

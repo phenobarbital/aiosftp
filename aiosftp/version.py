@@ -5,10 +5,10 @@
 __title__ = 'aiosftp'
 __description__ = ('FTP/SSH/sFTP Server implementation built on to of Asyncio.'
                    'Facility to deploy SSH server easily inside any project.')
-__version__ = '0.0.1'
+__version__ = '0.1.0'
 __author__ = 'Jesus Lara'
 __author_email__ = 'jesuslara@phenoarbital.info'
-__license__ = 'Apache 2'
+__license__ = 'Apache-2'
 
 def get_version() -> tuple: # pragma: no cover
    """
