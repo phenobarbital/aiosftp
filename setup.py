@@ -94,7 +94,7 @@ setup(
     tests_require=[
             'pytest>=5.4.0',
             'coverage',
-            'pytest-asyncio==0.20.1',
+            'pytest-asyncio==0.20.2',
             'pytest-xdist==3.0.2',
             'pytest-assume==2.4.2'
     ],
