@@ -75,7 +75,7 @@ setup(
     ],
     author='Jesus Lara',
     author_email='jesuslara@phenobarbital.info',
-    packages=find_packages(exclude=['contrib', 'bin', 'build', 'dist', 'settings']),
+    packages=find_packages(exclude=["contrib", "docs", "tests", "settings"]),
     setup_requires=[
         "asyncio==3.4.3",
     ],
