@@ -1,8 +1,0 @@
-
-include LICENSE
-include CHANGELOG.md
-include README.md
-include Makefile
-graft aiosftp
-global-exclude *.pyc
-prune docs/_build

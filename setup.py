@@ -21,7 +21,6 @@ def readme():
 
 version = get_path('aiosftp/version.py')
 with open(version, 'r', encoding='utf-8') as meta:
-    # exec(meta.read())
     t = compile(meta.read(), version, 'exec', ast.PyCF_ONLY_AST)
     for node in (n for n in t.body if isinstance(n, ast.Assign)):
         if len(node.targets) == 1:
@@ -83,13 +82,11 @@ setup(
         "aiohttp==3.8.3",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
-        "aiofiles==0.8.0",
-        "aiofile==3.8.1",
+        "asyncdb>=2.1.30",
+        "navconfig[default]>=1.0.8",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.12.0",
-        "asyncdb[default]>=2.1.30",
-        "navconfig>=1.0.6"
     ],
     tests_require=[
             'pytest>=5.4.0',
