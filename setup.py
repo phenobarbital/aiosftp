@@ -76,7 +76,6 @@ setup(
     author_email='jesuslara@phenobarbital.info',
     packages=find_packages(exclude=["contrib", "docs", "tests", "settings"]),
     setup_requires=[
-        "asyncio==3.4.3",
         'wheel==0.38.4',
         'cython==0.29.33'
     ],
@@ -89,13 +88,6 @@ setup(
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.13.1",
-    ],
-    tests_require=[
-            'pytest>=5.4.0',
-            'coverage',
-            'pytest-asyncio==0.20.1',
-            'pytest-xdist==3.0.2',
-            'pytest-assume==2.4.2'
     ],
     entry_points={
         'console_scripts': [
