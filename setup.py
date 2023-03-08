@@ -75,11 +75,13 @@ setup(
     author='Jesus Lara',
     author_email='jesuslara@phenobarbital.info',
     packages=find_packages(exclude=["contrib", "docs", "tests", "settings"]),
+    include_package_data=True,
     setup_requires=[
         'wheel==0.38.4',
         'cython==0.29.33'
     ],
     install_requires=[
+        'wheel==0.38.4',
         "aiohttp==3.8.4",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
