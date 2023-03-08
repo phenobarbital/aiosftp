@@ -77,13 +77,15 @@ setup(
     packages=find_packages(exclude=["contrib", "docs", "tests", "settings"]),
     setup_requires=[
         "asyncio==3.4.3",
+        'wheel==0.38.4',
+        'cython==0.29.33'
     ],
     install_requires=[
-        "aiohttp==3.8.3",
+        "aiohttp==3.8.4",
         "asyncio==3.4.3",
         "uvloop==0.17.0",
-        "asyncdb>=2.1.30",
-        "navconfig[default]>=1.0.8",
+        "asyncdb>=2.2.0",
+        "navconfig[default]>=1.1.0",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.12.0",

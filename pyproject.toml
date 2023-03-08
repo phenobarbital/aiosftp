@@ -1,8 +1,8 @@
 [build-system]
 requires = [
-    'setuptools>=47',
-    'asyncio==3.4.3',
-    'flit'
+    'setuptools==67.5.1',
+    'Cython==0.29.33',
+    'wheel==0.38.4',
 ]
 
 build-backend = "setuptools.build_meta"
@@ -22,6 +22,7 @@ classifiers=[
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python",
   "Typing :: Typed",
   "Environment :: Web Environment",
@@ -32,7 +33,7 @@ classifiers=[
   "License :: OSI Approved :: MIT License",
 ]
 description-file = "README.md"
-requires-python = ">=3.8.5"
+requires-python = ">=3.9.16"
 
 [tool.pytest.ini_options]
 addopts = [
