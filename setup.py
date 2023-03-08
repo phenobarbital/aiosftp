@@ -88,7 +88,7 @@ setup(
         "navconfig[default]>=1.1.0",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
-        "asyncssh==2.12.0",
+        "asyncssh==2.13.1",
     ],
     tests_require=[
             'pytest>=5.4.0',

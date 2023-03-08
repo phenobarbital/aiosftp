@@ -3,6 +3,7 @@ requires = [
     'setuptools==67.5.1',
     'Cython==0.29.33',
     'wheel==0.38.4',
+    'flit'
 ]
 
 build-backend = "setuptools.build_meta"
@@ -10,7 +11,7 @@ build-backend = "setuptools.build_meta"
 [tool.flit.metadata]
 module = "aiosftp"
 author = "Jesus Lara Gimenez"
-author-email = "jesuslara@phenobarbital.info"
+author-email = "jesuslarag@gmail.com"
 home-page = "https://github.com/phenobarbital/aiosftp"
 license = "Apache 2"
 keywords = "ftp, ftp server, sftp server, ssh server, asyncio"
@@ -30,7 +31,7 @@ classifiers=[
   "Topic :: Software Development :: Libraries :: Application Frameworks",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Topic :: Software Development :: Build Tools",
-  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache 2 License",
 ]
 description-file = "README.md"
 requires-python = ">=3.9.16"
