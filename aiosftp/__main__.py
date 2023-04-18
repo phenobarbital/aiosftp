@@ -67,7 +67,7 @@ def main():
             scp.start()
         )
         loop.run_forever()
-    except Exception as e:
+    except Exception:
         raise
     except KeyboardInterrupt:
         loop.run_until_complete(ftp.close())
