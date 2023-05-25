@@ -78,7 +78,7 @@ setup(
     include_package_data=True,
     setup_requires=[
         'wheel==0.40.0',
-        'cython==0.29.33'
+        'cython==0.29.35'
     ],
     install_requires=[
         'wheel==0.40.0',
