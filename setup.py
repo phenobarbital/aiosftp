@@ -82,7 +82,7 @@ setup(
     ],
     install_requires=[
         'wheel==0.40.0',
-        "aiohttp==3.8.4",
+        "aiohttp==3.8.5",
         "asyncio==3.4.3",
         "asyncdb>=2.2.0",
         "navconfig[default]>=1.1.0",
