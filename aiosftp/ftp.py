@@ -184,6 +184,6 @@ class FTPServer(object):
         await self._server.start(
             host=self.host,
             port=int(self.port),
-            family=socket.AF_INET,
-            loop=self._loop
+            family=socket.AF_INET
+            # loop=self._loop
         )
