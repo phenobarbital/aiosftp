@@ -54,7 +54,7 @@ setup(
     description=__description__,
     long_description=readme(),
     long_description_content_type='text/markdown',
-    keywords = "ftp, ftp server, sftp server, ssh server, asyncio",
+    keywords="ftp, ftp server, sftp server, ssh server, asyncio",
     license=__license__,
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -77,22 +77,22 @@ setup(
     packages=find_packages(exclude=["contrib", "docs", "tests", "settings"]),
     include_package_data=True,
     setup_requires=[
-        'wheel==0.40.0',
-        'cython==0.29.33'
+        'wheel==0.42.0',
+        'Cython==3.0.6'
     ],
     install_requires=[
-        'wheel==0.40.0',
+        'wheel==0.42.0',
         "aiohttp>=3.8.5",
         "asyncio==3.4.3",
-        "asyncdb>=2.2.0",
-        "navconfig[default]>=1.1.0",
+        "asyncdb>=2.6.0",
+        "navconfig[default]>=1.5.0",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
         "asyncssh==2.13.2",
     ],
     extras_require={
         "uvloop": [
-            "uvloop>=0.17.0",
+            "uvloop>=0.19.0",
         ],
     },
     entry_points={

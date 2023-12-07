@@ -3,11 +3,11 @@ venv:
 	echo 'run `source .venv/bin/activate` to start develop aioSFTP.'
 
 setup:
-	pip install wheel==0.38.4
+	pip install wheel==0.42.0
 	pip install -e .
 
 develop:
-	pip install wheel==0.38.4
+	pip install wheel==0.42.0
 	pip install -e .
 	pip install -Ur docs/requirements-dev.txt
 	flit install --symlink
