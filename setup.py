@@ -88,7 +88,7 @@ setup(
         "navconfig[default]>=1.5.0",
         "aioftp==0.21.4",
         "siosocks>=0.3.0",
-        "asyncssh==2.13.2",
+        "asyncssh==2.14.2",
     ],
     extras_require={
         "uvloop": [
