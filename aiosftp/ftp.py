@@ -75,17 +75,17 @@ class UserModel(AbstractUserManager):
         else:
             state = AbstractUserManager.GetUserResponse.OK
             info = 'User OK'
-        print(state, user, info)
         # if state != AbstractUserManager.GetUserResponse.ERROR:
         #     self.available_connections[user].acquire()
         return state, user, info
 
     async def authenticate(self, user: aioftp.User, password: str) -> bool:
-        print(user, password)
+        """
+        Authenticate user with password.
+        """
         return True
 
     async def notify_logout(self, user: aioftp.User):
-        print(user)
         self.available_connections[user].release()
         return user
 
