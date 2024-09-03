@@ -7,7 +7,6 @@ import ssl
 import pathlib
 import socket
 import asyncio
-import uvloop
 import aioftp
 from aioftp.server import AbstractUserManager, AvailableConnections
 from navconfig import BASE_DIR
@@ -21,7 +20,6 @@ from .conf import (
     CERT_CHECK_HOSTNAME
 )
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 try:
     DEFAULT_HOST = FTP_SERVER_HOST

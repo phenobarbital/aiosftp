@@ -1,7 +1,6 @@
 """aio (s)FTP server entry point."""
 import asyncio
 import argparse
-import uvloop
 from .ftp import FTPServer
 from .scp import SCPServer
 from .conf import (
@@ -11,15 +10,15 @@ from .conf import (
     SSH_SERVER_PORT,
     SERVICE_BASE_PATH
 )
+from .uv import install_uvloop
 
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-uvloop.install()
+install_uvloop()
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 
 
-def main():
+def main() -> None:
     """Main Worker Function."""
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter
