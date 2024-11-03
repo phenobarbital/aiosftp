@@ -70,6 +70,8 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Framework :: AsyncIO'
     ],
     author='Jesus Lara',
@@ -90,7 +92,7 @@ setup(
     ],
     extras_require={
         "uvloop": [
-            "uvloop>=0.19.0",
+            "uvloop>=0.20.0",
         ],
     },
     entry_points={
